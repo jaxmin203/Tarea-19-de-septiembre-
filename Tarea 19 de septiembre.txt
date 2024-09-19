@@ -1,0 +1,20 @@
+﻿% Matriz de coeficientes A
+A = [8 4 -1;
+    -2 5 1;
+     2 -1 6];
+
+% Vector de términos independientes b
+b = [11; 4; 7];
+
+% Descomposición LU sin pivoteo
+[L, U] = lu(A);
+
+% Resolver Ly = b
+y = L \ b;
+
+% Resolver Ux = y
+x = U \ y;
+
+% Mostrar el resultado
+disp('Solución del sistema (valores de x):');
+disp(x);
